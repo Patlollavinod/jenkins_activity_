@@ -1,0 +1,23 @@
+pipeline {
+  agent {
+    node {
+      label 'docker'
+    }
+  }
+  options {
+    timestamps()
+  }
+
+  environment {
+    IMAGE = readMavenPom().getArtifactId()
+    VERSION = readMavenPom().getVersion()
+  }
+
+  stages {
+    stage('Build') {
+      agent {
+        docker {
+          reuseNode true
+          image 'maven:3.5.0-jdk-8'
+        }
+      }
