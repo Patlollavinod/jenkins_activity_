@@ -1,8 +1,12 @@
 node {
-    stage('test') {
+    stage('build') {
         sh 'echo hello'
     }
-    stage('learning') {
+    stage('testing') {
         git url: 'git@github.com:Patlollavinod/jenkins_activity_.git',
             branch: 'main'
     }
+    stage ('install terraform') {
+        sh "sudo apt-get update && sudo apt-get install packer"
+        sh "sudo packer version"
+    }   
