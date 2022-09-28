@@ -3,7 +3,7 @@ node {
         sh 'echo hello'
     }
     stage('learning') {
-        git url: https://github.com/Patlollavinod/jenkins_activity_'',
+        git url: git@github.com:Patlollavinod/jenkins_activity_.git'',
             branch: 'master'
     }
 }
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('learning') {
             steps {
-                git url:https://github.com/Patlollavinod/jenkins_activity_ '', 
+                git url:git@github.com:Patlollavinod/jenkins_activity_.git'', 
                     branch: 'master'
             }
         }
