@@ -10,7 +10,7 @@ pipeline {
         stage('learning') {
             steps {
                 git url:'git@github.com:Patlollavinod/jenkins_activity_.git', 
-                    branch: 'master'
+                    branch: 'main'
             }
         }
     }
