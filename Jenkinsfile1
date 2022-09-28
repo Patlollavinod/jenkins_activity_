@@ -3,6 +3,6 @@ node {
         sh 'echo hello'
     }
     stage('learning') {
-        git url: git@github.com:Patlollavinod/jenkins_activity_.git'',
-            branch: 'master'
+        git url: 'git@github.com:Patlollavinod/jenkins_activity_.git',
+            branch: 'main'
     }
