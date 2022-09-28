@@ -15,12 +15,10 @@ pipeline {
             
         }
     }
-    stage('install git')
-    
-    {
-        steps {
-            sh 'sudo apt install git'
-            sh 'sudo git --version'
-        }
-    }
+    stage('Install Terraform') {
+              steps {
+                    sh "sudo apt-get update && sudo apt-get install terraform"
+                    sh "sudo terraform version"
+              }
+          }
 }
